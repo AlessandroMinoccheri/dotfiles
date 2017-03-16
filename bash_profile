@@ -3,6 +3,7 @@
 export PATH="/Applications/XAMPP/bin:$PATH"
 export PATH="~/.composer/vendor/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
-export PATH="/Users/alessandrominoccheri/node_modules/.bin:$PATH"
-export PATH="/usr/local/bin/node_modules/.bin:$PATH"
+#export PATH="/Users/alessandrominoccheri/node_modules/.bin:$PATH"
+#export PATH="/usr/local/bin/node_modules/.bin:$PATH"
+export PATH="/usr/local/lib/node_modules/.bin:$PATH"
 export PATH
