@@ -8,3 +8,7 @@ cp -rf  zsh/ ~/.zsh/
 
 printf "\nInstalling zsh configuration"
 cp -f zshrc ~/.zshrc
+
+printf "\nInstalling zsh configuration"
+mkdir -p ~/.config
+cp -rf nvim ~/.config/nvim

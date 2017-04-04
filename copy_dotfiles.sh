@@ -8,3 +8,6 @@ cp -rf ~/.zsh/ zsh
 
 printf "\nCopying zsh configuration"
 cp ~/.zshrc zshrc
+
+printf "\nCopying neovim configuration"
+cp -rf ~/.config/nvim nvim
