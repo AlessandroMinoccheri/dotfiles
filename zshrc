@@ -129,3 +129,6 @@ if [ -f /Users/alessandrominoccheri/.tnsrc ]; then
     source /Users/alessandrominoccheri/.tnsrc
 fi
 ###-tns-completion-end-###
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
