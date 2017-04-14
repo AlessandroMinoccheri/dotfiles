@@ -10,4 +10,5 @@ printf "\nCopying zsh configuration"
 cp ~/.zshrc zshrc
 
 printf "\nCopying neovim configuration"
+cp ~/.vimrc vimrc
 cp -rf ~/.config/nvim nvim

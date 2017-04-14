@@ -11,4 +11,5 @@ cp -f zshrc ~/.zshrc
 
 printf "\nInstalling zsh configuration"
 mkdir -p ~/.config
+cp vimrc ~/.vimrc
 cp -rf nvim ~/.config/nvim

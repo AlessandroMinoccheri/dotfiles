@@ -3,9 +3,9 @@ export PATH="~/.composer/vendor/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/lib/node_modules/.bin:$PATH"
 export PATH="~/.npm/.bin:$PATH"
-export NVM_DIR="$HOME/.nvm"
 export PATH="~/.npm:$PATH"
 export PATH="/usr/local/bin:$PATH"
+alias composer="php /usr/local/bin/composer.phar"
 export PATH
 
 export ANDROID_HOME=export ANDROID_HOME=/usr/local/opt/android-sdk
