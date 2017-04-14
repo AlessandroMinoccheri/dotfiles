@@ -9,5 +9,12 @@ Plug 'kien/ctrlp.vim'
 call plug#end()
 
 syntax enable
+set list listchars=tab:»·,trail:·
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
 set background=dark
+set expandtab
 colorscheme OceanicNext
+
+nnoremap <Leader><Leader> :tabe ~/.config/nvim/init.vim
