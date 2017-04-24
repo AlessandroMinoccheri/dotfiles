@@ -14,6 +14,6 @@ mkdir -p ~/.config
 cp vimrc ~/.vimrc
 cp -rf nvim ~/.config/nvim
 
-printf "\nInstalling global git configuratio to ignore files and folders"
-cp .gitignore_global ~/.gitignore_global
+printf "\nInstalling global git configuration to ignore files and folders"
+cp gitignore_global ~/.gitignore_global
 git config --global core.excludesfile ~/.gitignore_global
