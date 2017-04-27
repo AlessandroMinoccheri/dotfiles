@@ -17,3 +17,6 @@ cp -rf nvim ~/.config/nvim
 printf "\nInstalling global git configuration to ignore files and folders"
 cp gitignore_global ~/.gitignore_global
 git config --global core.excludesfile ~/.gitignore_global
+
+printf "\nInstalling git configurations and aliases"
+cp gitconfig ~/.gitconfig

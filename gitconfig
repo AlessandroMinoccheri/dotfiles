@@ -1,0 +1,8 @@
+[user]
+	name = Alessandro Minoccheri
+	email = alessandro@studiomado.it
+[core]
+	editor = nvim
+	excludesfile = /Users/alessandrominoccheri/.gitignore_global
+[alias]
+    t = log --oneline --color --decorate --all --graph

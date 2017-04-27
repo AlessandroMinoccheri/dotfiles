@@ -15,3 +15,6 @@ cp -rf ~/.config/nvim nvim
 
 printf "\nCopying git general ignores file and folders"
 cp ~/.gitignore_global gitignore_global
+
+printf "\Copying git configurations and aliases"
+cp ~/.gitconfig gitconfig
