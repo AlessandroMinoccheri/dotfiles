@@ -15,8 +15,6 @@ set softtabstop=4
 set tabstop=4
 set background=dark
 set expandtab
-set colorcolumn=80
-highlight ColorColumn ctermbg=0 guibg=lightgrey
 colorscheme OceanicNext
 
 nnoremap <Leader><Leader> :tabe ~/.config/nvim/init.vim
