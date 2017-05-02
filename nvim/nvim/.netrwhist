@@ -1,6 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/Users/alessandrominoccheri/Sites/tris'
 let g:netrw_dirhist_2='/Users/alessandrominoccheri/.config'
 let g:netrw_dirhist_3='/Users/alessandrominoccheri/Sites/dotfiles'
 let g:netrw_dirhist_4='/Users/alessandrominoccheri/Sites/poker_kata'
+let g:netrw_dirhist_5='/Users/alessandrominoccheri/Sites/dotfiles'
+let g:netrw_dirhist_6='/Users/alessandrominoccheri/Sites/container'
+let g:netrw_dirhist_7='/Users/alessandrominoccheri/.config/nvim'
+let g:netrw_dirhist_8='/Users/alessandrominoccheri/Sites/dotfiles'

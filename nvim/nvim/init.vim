@@ -16,6 +16,7 @@ set tabstop=4
 set background=dark
 set expandtab
 set colorcolumn=80
+set number
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 colorscheme OceanicNext
 
