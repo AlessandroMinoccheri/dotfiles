@@ -5,7 +5,9 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'rking/ag.vim'
 Plug 'mhartington/oceanic-next'
-Plug 'kien/ctrlp.vim' 
+Plug 'kien/ctrlp.vim'
+Plug 'https://github.com/neomake/neomake'
+Plug 'airblade/vim-gitgutter'
 call plug#end()
 
 syntax enable
