@@ -15,3 +15,7 @@ if [ -f /Users/alessandrominoccheri/.tnsrc ]; then
     source /Users/alessandrominoccheri/.tnsrc
 fi
 ###-tns-completion-end-###
+
+if [ -f ~/.bash_customer ]; then
+    . ~/.bash_customer
+fi
