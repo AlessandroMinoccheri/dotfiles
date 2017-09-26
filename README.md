@@ -4,7 +4,7 @@ This repository containes my personal configuration about some software that nor
 
 * nvim
 * phpstorm
-* guthub
+* github
 * zsh
 
 and others.
