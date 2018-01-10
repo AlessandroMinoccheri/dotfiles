@@ -6,3 +6,5 @@
 	excludesfile = /Users/alessandrominoccheri/.gitignore_global
 [alias]
     t = log --oneline --color --decorate --all --graph
+[color]
+	ui = true
