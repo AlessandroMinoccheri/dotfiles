@@ -1,4 +1,4 @@
-export PATH="/Applications/XAMPP/bin:$PATH"
+export PATH="$PATH:/Applications/XAMPP/bin"
 export PATH="~/.composer/vendor/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/lib/node_modules/.bin:$PATH"
