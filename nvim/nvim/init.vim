@@ -9,6 +9,7 @@ Plug 'https://github.com/neomake/neomake'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'majutsushi/tagbar'
 call plug#end()
 
 syntax enable
@@ -39,7 +40,16 @@ let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#fnamemod = ':t'                            " show only the filename into the tab buffer
 let g:airline#extensions#tabline#buffer_nr_show = 1                         " show the buffer number into the tab buffer
+let g:tabline#show_tabs = 0
+let g:airline#extensions#hunks#enabled=0
 
+"GitGutter
+let g:gitgutter_async=0
+set updatetime=200
+
+" tagbar
+let g:tagbar_width =  70
+autocmd FileType php nnoremap <buffer> <C-e> :TagbarToggle<CR>
 
 "Remapping key
 nnoremap <Leader><Leader> :tabe ~/.config/nvim/init.vim
