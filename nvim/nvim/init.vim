@@ -51,6 +51,10 @@ set updatetime=200
 let g:tagbar_width =  70
 autocmd FileType php nnoremap <buffer> <C-e> :TagbarToggle<CR>
 
+"the silver seracher for :Ag
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
+
 "Remapping key
 nnoremap <Leader><Leader> :tabe ~/.config/nvim/init.vim
 nnoremap <c-p> :Files<cr>
