@@ -9,7 +9,7 @@ This repository containes my personal configuration about some software that nor
 
 and others.
 
-Useful library
+## Useful library
 
 ```
 brew install the_silver_searcher
@@ -18,5 +18,18 @@ brew install ctags-exuberant
 brew install python3
 brew install tig
 ```
+
+## Fonts
+
+```
+git clone https://github.com/powerline/fonts.git
+cd fonts
+./install.sh
+cd ..
+rm -rf fonts
+```
+
+After enter into iTerm2 Preferences, select the prefered profile and change the font ASCII with Droid Sans Mono for Powerline
+
 
 Please contribute if you want to create better configuration

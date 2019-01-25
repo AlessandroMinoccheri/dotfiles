@@ -10,6 +10,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'majutsushi/tagbar'
+Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
 call plug#end()
 
 syntax enable
@@ -23,6 +24,7 @@ set colorcolumn=120
 set number
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 colorscheme OceanicNext
+set guifont=DroidSansMono_Nerd_Font:h11
 
 "Airline configuration
 set laststatus=2
@@ -59,3 +61,4 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 nnoremap <Leader><Leader> :tabe ~/.config/nvim/init.vim
 nnoremap <c-p> :Files<cr>
 nnoremap t :bNext<cr>
+autocmd FileType php nnoremap <buffer> <C-]> :call phpactor#GotoDefinition()<CR>

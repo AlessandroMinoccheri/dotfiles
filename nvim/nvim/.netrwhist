@@ -1,7 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/Users/alessandrominoccheri/Sites/selma_sito'
-let g:netrw_dirhist_2='/Users/alessandrominoccheri/Sites'
-let g:netrw_dirhist_3='/Users/alessandrominoccheri/Sites/selma_sito'
-let g:netrw_dirhist_4='/Users/alessandrominoccheri/Sites/dotfiles'
-let g:netrw_dirhist_5='/Users/alessandrominoccheri/Sites/selma_sito'
+let g:netrw_dirhist_cnt =0
