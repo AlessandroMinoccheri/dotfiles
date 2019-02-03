@@ -60,5 +60,6 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 "Remapping key
 nnoremap <Leader><Leader> :tabe ~/.config/nvim/init.vim
 nnoremap <c-p> :Files<cr>
+nnoremap <shift> :Files<cr>
 nnoremap t :bNext<cr>
 autocmd FileType php nnoremap <buffer> <C-]> :call phpactor#GotoDefinition()<CR>

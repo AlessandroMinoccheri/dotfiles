@@ -31,5 +31,12 @@ rm -rf fonts
 
 After enter into iTerm2 Preferences, select the prefered profile and change the font ASCII with Droid Sans Mono for Powerline
 
+### PHPActor
+
+If you want to use with success PHPActor you need to go into its directory (example: ~./config/nvim/plugged/phpactor), and launch:
+
+```
+composer install
+```
 
 Please contribute if you want to create better configuration
