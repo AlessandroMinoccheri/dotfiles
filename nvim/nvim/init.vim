@@ -57,6 +57,8 @@ autocmd FileType php nnoremap <buffer> <C-e> :TagbarToggle<CR>
 "the silver seracher for :Ag
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
+"NeoMake configuration
+call neomake#configure#automake('nrwi', 500)
 
 "Remapping key
 nnoremap <Leader><Leader> :tabe ~/.config/nvim/init.vim
