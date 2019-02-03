@@ -11,6 +11,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'majutsushi/tagbar'
 Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
+Plug 'stephpy/vim-php-cs-fixer'
 call plug#end()
 
 syntax enable
