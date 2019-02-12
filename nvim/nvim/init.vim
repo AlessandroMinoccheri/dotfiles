@@ -22,7 +22,10 @@ set tabstop=4
 set background=dark
 set expandtab
 set colorcolumn=120
-set number
+set number                  " show line numbers
+set ignorecase              " ignore case when searching
+set ruler                   " show the current row and column
+set nobackup
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 colorscheme OceanicNext
 set guifont=DroidSansMono_Nerd_Font:h11

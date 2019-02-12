@@ -1,3 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
-let g:netrw_dirhist_1='/Users/alessandrominoccheri/Sites/01_machinery'
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/Users/alessandrominoccheri/Sites/unicredit_api'
+let g:netrw_dirhist_2='/Users/alessandrominoccheri/Sites/unicredit_api/query'
+let g:netrw_dirhist_3='/Users/alessandrominoccheri/Sites/unicredit_api'
+let g:netrw_dirhist_4='/Users/alessandrominoccheri/Sites/unicredit_api/query'
