@@ -1,6 +1,6 @@
 [user]
 	name = Alessandro Minoccheri
-	email = alessandro@studiomado.it
+	email = alessandro.minoccheri@ideato.info
 [core]
 	editor = nvim
 	excludesfile = /Users/alessandrominoccheri/.gitignore_global
