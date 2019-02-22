@@ -1,6 +1,6 @@
 # Dotfiles
 
-This repository containes my personal configuration about some software that normally I use like: 
+This repository contains my personal configuration about some software that normally I use like: 
 
 * nvim
 * phpstorm
