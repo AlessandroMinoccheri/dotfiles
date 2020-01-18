@@ -12,6 +12,12 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'majutsushi/tagbar'
 Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
 Plug 'stephpy/vim-php-cs-fixer'
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+let g:coc_user_config = get(g:, 'coc_user_config', {})
+let g:coc_global_extensions = ['coc-json', 'coc-tsserver', 'coc-tslint', 'coc-prettier']
 call plug#end()
 
 syntax enable
@@ -69,3 +75,15 @@ nnoremap <c-p> :Files<cr>
 nnoremap <shift> :Files<cr>
 nnoremap t :bNext<cr>
 autocmd FileType php nnoremap <buffer> <C-]> :call phpactor#GotoDefinition()<CR>
+autocmd FileType json syntax match Comment +\/\/.\+$+
+
+function! SetupCommandAbbrs(from, to)
+  exec 'cnoreabbrev <expr> '.a:from
+        \ .' ((getcmdtype() ==# ":" && getcmdline() ==# "'.a:from.'")'
+        \ .'? ("'.a:to.'") : ("'.a:from.'"))'
+endfunction
+
+" Use C to open coc config
+call SetupCommandAbbrs('C', 'CocConfig')
+
+

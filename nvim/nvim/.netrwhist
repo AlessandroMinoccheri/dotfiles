@@ -1,3 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
-let g:netrw_dirhist_1='/Users/alessandrominoccheri/Work/Ale/dotfiles/.git'
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/Users/alessandrominoccheri'
+let g:netrw_dirhist_2='/Users/alessandrominoccheri/.config/nvim'
+let g:netrw_dirhist_1='/Users/alessandrominoccheri'
