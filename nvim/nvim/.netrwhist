@@ -1,5 +1,12 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =3
-let g:netrw_dirhist_3='/Users/alessandrominoccheri'
-let g:netrw_dirhist_2='/Users/alessandrominoccheri/.config/nvim'
-let g:netrw_dirhist_1='/Users/alessandrominoccheri'
+let g:netrw_dirhistcnt =8
+let g:netrw_dirhist_8='/Users/alessandrominoccheri/Work/Ale/kata-go/www/frontend/src/components'
+let g:netrw_dirhist_7='/Users/alessandrominoccheri/Work/Ale/kata-go/www/frontend/src'
+let g:netrw_dirhist_6='/Users/alessandrominoccheri/Work/Ale/kata-go/www/frontend'
+let g:netrw_dirhist_5='/Users/alessandrominoccheri/Work/Ale/kata-go/www'
+let g:netrw_dirhist_4='/Users/alessandrominoccheri/Work/Ale/kata-go'
+let g:netrw_dirhist_3='/Users/alessandrominoccheri/Work/Ale/kata-go/www/frontend/src/components'
+let g:netrw_dirhist_2='/Users/alessandrominoccheri/Work/Ale/kata-go/www/frontend/src'
+let g:netrw_dirhist_1='/Users/alessandrominoccheri/Work/Ale/kata-go/www/frontend'
+let g:netrw_dirhist_0='/Users/alessandrominoccheri/Work/Ale/kata-go/www'
+let g:netrw_dirhist_9='/Users/alessandrominoccheri/Work/Ale/kata-go'

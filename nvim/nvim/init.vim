@@ -15,6 +15,7 @@ Plug 'stephpy/vim-php-cs-fixer'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'w0rp/ale'
 
 let g:coc_user_config = get(g:, 'coc_user_config', {})
 let g:coc_global_extensions = ['coc-json', 'coc-tsserver', 'coc-tslint', 'coc-prettier']
@@ -86,4 +87,11 @@ endfunction
 " Use C to open coc config
 call SetupCommandAbbrs('C', 'CocConfig')
 
+"prettier for JS linter
 
+let g:ale_fixers = {}
+let g:ale_fixers['javascript'] = ['eslint']
+
+let g:ale_sign_error = '❌'
+let g:ale_sign_warning = '⚠️'
+let g:ale_fix_on_save = 1
