@@ -11,14 +11,61 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'majutsushi/tagbar'
 Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
-Plug 'stephpy/vim-php-cs-fixer'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'w0rp/ale'
 
+" easily search, substitute, abbreviate multiple version of words, coercion to camel case / snake case / dote case / title case...
+Plug 'tpope/vim-abolish'
+
+" the . command can repeat whatever you want!
+" http://vimcasts.org/episodes/creating-repeatable-mappings-with-repeat-vim/
+Plug 'tpope/vim-repeat'
+
+" keystroke to comment automatically depending on the file you're in
+Plug 'tpope/vim-commentary'
+
+" Match more stuff with % (html tag, LaTeX...)
+Plug 'andymass/vim-matchup'
+
+" PHP
+" Plug 'joonty/vdebug'
+Plug 'StanAngeloff/php.vim', {'for': 'php'}
+Plug 'stephpy/vim-php-cs-fixer', {'for': 'php'}
+Plug 'nishigori/vim-php-dictionary', {'for': 'php'}
+Plug 'lumiliet/vim-twig', {'for': 'twig'} " twig
+Plug 'adoy/vim-php-refactoring-toolbox', {'for': 'php'} " php refactoring options
+Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install --no-dev -o'}
+Plug '2072/php-indenting-for-vim', {'for': 'php'}
+Plug 'tobyS/vmustache' | Plug 'tobyS/pdv', {'for': 'php'} " php doc autocompletion 
+
+" Javascript
+Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
+Plug 'mxw/vim-jsx' " For react
+Plug 'posva/vim-vue' " For Vue
+
+" Undo tree display
+Plug 'simnalamburt/vim-mundo'
+
+" CSV plugin
+Plug 'chrisbra/csv.vim'
+
 let g:coc_user_config = get(g:, 'coc_user_config', {})
-let g:coc_global_extensions = ['coc-json', 'coc-tsserver', 'coc-tslint', 'coc-prettier']
+" Coc extensions
+let g:coc_global_extensions = [
+    \ 'coc-snippets',
+    \ 'coc-json', 
+    \ 'coc-css', 
+    \ 'coc-tsserver',
+    \ 'coc-html',
+    \ 'coc-yaml',
+    \ 'coc-prettier',
+    \ 'coc-tslint'
+    \]
+" \ 'coc-markmap',
+" \ 'coc-sh',
 call plug#end()
 
 syntax enable

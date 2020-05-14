@@ -1,4 +1,3 @@
-export PATH="$PATH:/Applications/XAMPP/bin"
 export PATH="~/.composer/vendor/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/lib/node_modules/.bin:$PATH"
@@ -28,3 +27,6 @@ fi
 if [ -f ~/.bash_customer ]; then
     . ~/.bash_customer
 fi
+export PATH="/usr/local/opt/php@7.4/bin:$PATH"
+export PATH="/usr/local/opt/php@7.4/sbin:$PATH"
+export PATH="/Users/alessandrominoccheri/Library/Python/2.7/bin:$PATH"

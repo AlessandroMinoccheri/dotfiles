@@ -1,5 +1,14 @@
 {
+    "languageserver": {
+        "bash": {
+            "command": "bash-language-server",
+            "args": ["start"],
+            "filetypes": ["sh"],
+            "ignoredRootPaths": ["~"]
+        }
+    },
     "prettier.tslintIntegration": true,
     "prettier.eslintIntegration": false,
-    "coc.preferences.formatOnSaveFiletypes": ["typescript", "typescriptreact"]
+    "coc.preferences.formatOnSaveFiletypes": ["typescript", "typescriptreact", "php"],
+    "html.format.enable": true
 }
