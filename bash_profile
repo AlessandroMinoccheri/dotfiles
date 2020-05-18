@@ -13,6 +13,9 @@ export QT5_DIR=/usr/local/opt/qt5
 export CMAKE_MODULE_PATH=${QT5_DIR}/lib/cmake:${CMAKE_MODULE_PATH}
 export CMAKE_PREFIX_PATH=${QT5_DIR}
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-13.jdk/Contents/Home
+export PATH="/usr/local/opt/php@7.4/bin:$PATH"
+export PATH="/usr/local/opt/php@7.4/sbin:$PATH"
+export PATH="/Users/alessandrominoccheri/Library/Python/2.7/bin:$PATH"
 alias composer="php /usr/local/bin/composer.phar"
 export PATH
 
@@ -27,6 +30,3 @@ fi
 if [ -f ~/.bash_customer ]; then
     . ~/.bash_customer
 fi
-export PATH="/usr/local/opt/php@7.4/bin:$PATH"
-export PATH="/usr/local/opt/php@7.4/sbin:$PATH"
-export PATH="/Users/alessandrominoccheri/Library/Python/2.7/bin:$PATH"
