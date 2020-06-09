@@ -122,6 +122,9 @@ nnoremap <Leader><Leader> :tabe ~/.config/nvim/init.vim
 nnoremap <c-p> :Files<cr>
 nnoremap <shift> :Files<cr>
 nnoremap t :bNext<cr>
+nmap <leader>gd <Plug>(coc-definition)
+nmap <leader>gr <Plug>(coc-references)
+
 autocmd FileType php nnoremap <buffer> <C-]> :call phpactor#GotoDefinition()<CR>
 autocmd FileType json syntax match Comment +\/\/.\+$+
 
