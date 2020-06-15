@@ -131,6 +131,9 @@ noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
 
+"Disable ESC button
+inoremap <C-c> <esc>
+
 autocmd FileType php nnoremap <buffer> <C-]> :call phpactor#GotoDefinition()<CR>
 autocmd FileType json syntax match Comment +\/\/.\+$+
 
