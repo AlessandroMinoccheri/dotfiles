@@ -15,6 +15,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'w0rp/ale'
+Plug 'gabrielelana/vim-markdown'
 
 " easily search, substitute, abbreviate multiple version of words, coercion to camel case / snake case / dote case / title case...
 Plug 'tpope/vim-abolish'
