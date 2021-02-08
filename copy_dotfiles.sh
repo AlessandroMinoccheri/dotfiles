@@ -18,3 +18,8 @@ cp ~/.gitignore_global gitignore_global
 
 printf "\Copying git configurations and aliases"
 cp ~/.gitconfig gitconfig
+
+
+printf "\nCopying personal oh-my-zsh configuration"
+cp -rf ~/.oh-my-zsh/ oh-my-zsh
+

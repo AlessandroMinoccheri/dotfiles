@@ -1,0 +1,16 @@
+{
+    "languageserver": {
+        "intelephense": {
+            "command": "intelephense",
+            "args": ["--stdio"],
+            "filetypes": ["php"],
+            "initializationOptions": {
+                "storagePath": "/tmp/intelephense"
+            }
+        }
+    },
+    "prettier.tslintIntegration": true,
+    "prettier.eslintIntegration": true,
+    "coc.preferences.formatOnSaveFiletypes": ["typescript", "typescriptreact", "php"],
+    "html.format.enable": true
+}

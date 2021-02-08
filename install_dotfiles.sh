@@ -20,3 +20,7 @@ git config --global core.excludesfile ~/.gitignore_global
 
 printf "\nInstalling git configurations and aliases"
 cp gitconfig ~/.gitconfig
+
+printf "\nCopying personal oh-my-zsh configuration"
+cp -rf  oh-my-zsh/ ~/.oh-my-zsh/
+

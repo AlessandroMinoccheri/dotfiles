@@ -167,3 +167,10 @@ export PATH="/usr/local/opt/php@7.2/sbin:$PATH"
 # uninstall by removing these lines or running `tabtab uninstall slss`
 [[ -f /Users/alessandrominoccheri/.npm-global/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/alessandrominoccheri/.npm-global/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh
 
+
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+ZSH_DISABLE_COMPFIX=true
+
+source /usr/local/opt/powerlevel9k/powerlevel9k.zsh-theme
