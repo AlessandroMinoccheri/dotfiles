@@ -53,6 +53,10 @@ Plug 'simnalamburt/vim-mundo'
 " CSV plugin
 Plug 'chrisbra/csv.vim'
 
+
+" Python
+Plug 'davidhalter/jedi-vim'
+
 let g:coc_user_config = get(g:, 'coc_user_config', {})
 " Coc extensions
 let g:coc_global_extensions = [
@@ -156,4 +160,29 @@ let g:ale_sign_error = '❌'
 let g:ale_sign_warning = '⚠️'
 let g:ale_fix_on_save = 1
 let g:ale_lint_on_enter = 0 " Less distracting when opening a new file
+
+" Python
+"let g:jedi#auto_initialization = 0
+"let g:jedi#auto_vim_configuration = 
+"let g:jedi#use_tabs_not_buffers = 1
+"let g:jedi#use_splits_not_buffers = left
+"let g:jedi#popup_on_dot = 0
+"let g:jedi#popup_select_first = 0
+"let g:jedi#show_call_signatures = "1"
+
+"let g:jedi#goto_command = "<leader>d"
+"let g:jedi#goto_assignments_command = "<leader>g"
+"let g:jedi#goto_stubs_command = "<leader>s"
+"let g:jedi#goto_definitions_command = ""
+"let g:jedi#documentation_command = "K"
+"let g:jedi#usages_command = "<leader>n"
+"let g:jedi#completions_command = "<C-Space>"
+"let g:jedi#rename_command = "<leader>r"
+
+
+
+
+
+
+
 

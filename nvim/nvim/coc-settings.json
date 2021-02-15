@@ -12,5 +12,21 @@
     "prettier.tslintIntegration": true,
     "prettier.eslintIntegration": true,
     "coc.preferences.formatOnSaveFiletypes": ["typescript", "typescriptreact", "php"],
-    "html.format.enable": true
+    "html.format.enable": true,
+    
+    // python
+    //"python.pythonPath": "python",
+    // jedi
+    //"python.jediPath": "/Users/alessandrominoccheri/Library/Python/3.8/lib/python/site-packages/",
+    //"python.jediEnabled": false,
+    //"python.formatting.provider": "black"
+   // "suggest.timeout": 5000,
+    //formatting
+   // "python.formatting.provider": "black",
+    //"python.formatting.blackPath": "~/venvs/black/bin/black",
+    //linting
+    //"python.linting.pylintEnabled": true,
+    //"python.linting.flake8Enabled": false,
+    //"python.linting.pylintPath": "~/venvs/pylint/bin/pylint"
+
 }

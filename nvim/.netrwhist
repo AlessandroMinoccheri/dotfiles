@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =2
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/Users/alessandrominoccheri/Work/Ale/trading-api-bot'
 let g:netrw_dirhist_2='/Users/alessandrominoccheri/Work/Ale/dotfiles/nvim'
 let g:netrw_dirhist_1='/Users/alessandrominoccheri/Work/Flowing/scouting'
 let g:netrw_dirhist_0='/Users/alessandrominoccheri/.config/nvim'
@@ -9,4 +10,3 @@ let g:netrw_dirhist_7='/Users/alessandrominoccheri/Work/Flowing/scouting/www/bac
 let g:netrw_dirhist_6='/Users/alessandrominoccheri/Work/Flowing/scouting/www/backend/src'
 let g:netrw_dirhist_5='/Users/alessandrominoccheri/Work/Flowing/scouting/www/backend'
 let g:netrw_dirhist_4='/Users/alessandrominoccheri/Work/Flowing/scouting/www'
-let g:netrw_dirhist_3='/Users/alessandrominoccheri/Work/Flowing/scouting'
