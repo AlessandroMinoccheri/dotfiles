@@ -1,5 +1,5 @@
 [user]
-	name = Alessandro Minoccheri
+	name = AlessandroMinoccheri
 	email = alessandro.minoccheri@ideato.info
 [core]
 	editor = nvim
@@ -8,3 +8,5 @@
     t = log --oneline --color --decorate --all --graph
 [color]
 	ui = true
+[github]
+	user = AlessandroMinoccheri

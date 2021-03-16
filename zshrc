@@ -174,3 +174,7 @@ source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_DISABLE_COMPFIX=true
 
 source /usr/local/opt/powerlevel9k/powerlevel9k.zsh-theme
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/alessandrominoccheri/.sdkman"
+[[ -s "/Users/alessandrominoccheri/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/alessandrominoccheri/.sdkman/bin/sdkman-init.sh"

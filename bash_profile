@@ -17,8 +17,9 @@ export PATH="/usr/local/Cellar/php@7.4/7.4.15/bin:$PATH"
 export PATH="/Users/alessandrominoccheri/Library/Python/2.7/bin:$PATH"
 alias composer="php /usr/local/bin/composer.phar"
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
 export PATH
 
 export ANDROID_HOME=export ANDROID_HOME=/usr/local/opt/android-sdk
@@ -32,3 +33,7 @@ fi
 if [ -f ~/.bash_customer ]; then
     . ~/.bash_customer
 fi
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/alessandrominoccheri/.sdkman"
+[[ -s "/Users/alessandrominoccheri/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/alessandrominoccheri/.sdkman/bin/sdkman-init.sh"
