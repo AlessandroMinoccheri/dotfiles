@@ -10,3 +10,5 @@
 	ui = true
 [github]
 	user = AlessandroMinoccheri
+[help]
+	autoCorrect = 30
