@@ -4,6 +4,7 @@
 [core]
 	editor = nvim
 	excludesfile = /Users/alessandrominoccheri/.gitignore_global
+	autocrlf = input
 [alias]
     t = log --oneline --color --decorate --all --graph
 [color]

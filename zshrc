@@ -65,7 +65,7 @@ POWERLEVEL9K_ROOT_ICON="\uF09C"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     git 
-    osx 
+    macos 
     docker 
     composer
     zsh-syntax-highlighting
