@@ -63,11 +63,10 @@ let g:coc_global_extensions = [
     \ 'coc-snippets',
     \ 'coc-json', 
     \ 'coc-css', 
-    \ 'coc-tsserver',
     \ 'coc-html',
     \ 'coc-yaml',
     \ 'coc-prettier',
-    \ 'coc-tslint'
+    \ 'coc-tsserver'
     \]
 " \ 'coc-markmap',
 " \ 'coc-sh',
