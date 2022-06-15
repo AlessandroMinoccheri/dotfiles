@@ -9,7 +9,6 @@
             }
         }
     },
-    "prettier.tslintIntegration": true,
     "prettier.eslintIntegration": true,
     "coc.preferences.formatOnSaveFiletypes": ["typescript", "typescriptreact", "php"],
     "html.format.enable": true

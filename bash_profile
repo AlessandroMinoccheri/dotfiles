@@ -8,6 +8,7 @@ export PATH="/usr/local/bin:$PATH"
 export PATH="~/.npm-global/bin:$PATH"
 export PATH="/Users/alessandrominoccheri/.npm-global/bin/:$PATH"
 export PATH="/Users/alessandrominoccheri/.npm-global/lib/node_modules:$PATH"
+export PATH="/usr/local/opt:$PATH"
 export PATH="$HOME/.symfony/bin:$PATH"
 export QT5_DIR=/usr/local/opt/qt5
 export CMAKE_MODULE_PATH=${QT5_DIR}/lib/cmake:${CMAKE_MODULE_PATH}
