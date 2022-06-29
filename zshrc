@@ -71,6 +71,7 @@ plugins=(
     zsh-syntax-highlighting
     zsh-autosuggestions
     tmux
+    aws
 )
 
 source $ZSH/oh-my-zsh.sh
