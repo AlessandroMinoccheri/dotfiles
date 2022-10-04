@@ -72,6 +72,11 @@ let g:coc_global_extensions = [
 " \ 'coc-sh',
 call plug#end()
 
+" Treat Json as Jsonc
+augroup JsonToJsonc
+    autocmd! FileType json set filetype=jsonc
+augroup END
+
 syntax enable
 set list listchars=tab:»·,trail:·
 set shiftwidth=4
