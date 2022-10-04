@@ -111,7 +111,7 @@ let g:airline#extensions#tabline#fnamemod = ':t'                            " sh
 let g:airline#extensions#tabline#buffer_nr_show = 1                         " show the buffer number into the tab buffer
 let g:tabline#show_tabs = 0
 let g:airline#extensions#hunks#enabled=0
-
+let NERDTreeShowHidden=1                                                    " nerdTree show always hidden files
 "GitGutter
 let g:gitgutter_async=0
 set updatetime=200
@@ -164,6 +164,11 @@ let g:ale_sign_error = '❌'
 let g:ale_sign_warning = '⚠️'
 let g:ale_fix_on_save = 1
 let g:ale_lint_on_enter = 0 " Less distracting when opening a new file
+
+" FZF searching hidden files also
+
+let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -l -g ""'
+
 
 " Python
 "let g:jedi#auto_initialization = 0
