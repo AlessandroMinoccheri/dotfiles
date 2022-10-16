@@ -23,3 +23,6 @@ cp ~/.gitconfig gitconfig
 printf "\nCopying personal oh-my-zsh configuration"
 cp -rf ~/.oh-my-zsh/ oh-my-zsh
 
+
+printf "\nCopying personal ideavimrc configuration"
+cp  ~/.ideavimrc .ideavimrc
