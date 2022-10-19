@@ -1,0 +1,17 @@
+"Remapping key
+nnoremap <Leader><Leader> :tabe ~/.config/nvim/init.vim
+nnoremap <c-p> :Files<cr>
+nnoremap <shift> :Files<cr>
+nnoremap t :bNext<cr>
+nmap <leader>gd <Plug>(coc-definition)
+nmap <leader>gr <Plug>(coc-references)
+
+"Disable arrow keys
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+
+"Disable ESC button
+inoremap <C-c> <esc>
+

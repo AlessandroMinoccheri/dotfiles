@@ -86,6 +86,7 @@ set background=dark
 set expandtab
 set colorcolumn=120
 set number                  " show line numbers
+set relativenumber
 set ignorecase              " ignore case when searching
 set ruler                   " show the current row and column
 set nobackup
