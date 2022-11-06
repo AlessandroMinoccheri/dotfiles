@@ -9,6 +9,13 @@ This repository contains my personal configuration about some software that norm
 
 and others.
 
+## Necessary for neovim
+
+```
+brew install ripgrep
+brew install fd
+```
+
 ## Useful library
 
 ```

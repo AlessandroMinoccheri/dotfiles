@@ -16,6 +16,8 @@ Plug 'peitalin/vim-jsx-typescript'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'w0rp/ale'
 Plug 'gabrielelana/vim-markdown'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 
 " easily search, substitute, abbreviate multiple version of words, coercion to camel case / snake case / dote case / title case...
 Plug 'tpope/vim-abolish'
@@ -127,13 +129,23 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 "NeoMake configuration
 call neomake#configure#automake('nrwi', 500)
 
+let mapleader = " " " map leader to Space
+
 "Remapping key
-nnoremap <Leader><Leader> :tabe ~/.config/nvim/init.vim
-nnoremap <c-p> :Files<cr>
-nnoremap <shift> :Files<cr>
+" Find files using Telescope command-line sugar.
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+noremap <Leader><Leader> :tabe ~/.config/nvim/init.vim
+"nnoremap <c-p> :Files<cr>
+"nnoremap <shift> :Files<cr>
 nnoremap t :bNext<cr>
 nmap <leader>gd <Plug>(coc-definition)
 nmap <leader>gr <Plug>(coc-references)
+nnoremap <expr> j v:count ? 'j' : 'gj'
+nnoremap <expr> k v:count ? 'k' : 'gk'
 
 "Disable arrow keys
 noremap <Up> <Nop>
