@@ -183,6 +183,19 @@ let g:ale_lint_on_enter = 0 " Less distracting when opening a new file
 
 let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -l -g ""'
 
+" Enable FileType to differentiate custom configuration
+filetype on
+filetype indent on
+filetype plugin on
+filetype indent plugin on    " the order of 'indent' and 'plugin' is irrelevant
+
+" Telling to neovim that file with these type of extension are typescript
+" files to use a specific configuration in after/ftplugin/typescript.vim
+augroup SyntaxSettings
+    autocmd!
+    autocmd BufNewFile,BufRead *.tsx set filetype=typescript
+    autocmd BufNewFile,BufRead *.ts set filetype=typescript
+augroup END
 
 " Python
 "let g:jedi#auto_initialization = 0
@@ -201,8 +214,6 @@ let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -l -g ""'
 "let g:jedi#usages_command = "<leader>n"
 "let g:jedi#completions_command = "<C-Space>"
 "let g:jedi#rename_command = "<leader>r"
-
-
 
 
 
