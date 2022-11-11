@@ -18,6 +18,7 @@ Plug 'w0rp/ale'
 Plug 'gabrielelana/vim-markdown'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
 " easily search, substitute, abbreviate multiple version of words, coercion to camel case / snake case / dote case / title case...
 Plug 'tpope/vim-abolish'
@@ -93,7 +94,7 @@ set ignorecase              " ignore case when searching
 set ruler                   " show the current row and column
 set nobackup
 highlight ColorColumn ctermbg=0 guibg=lightgrey
-colorscheme OceanicNext
+colorscheme tokyonight
 set guifont=DroidSansMono_Nerd_Font:h11
 
 "Airline configuration
