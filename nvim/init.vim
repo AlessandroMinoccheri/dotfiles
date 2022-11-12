@@ -13,11 +13,24 @@ Plug 'majutsushi/tagbar'
 Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'w0rp/ale'
 Plug 'gabrielelana/vim-markdown'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
+Plug 'hrsh7th/vim-vsnip'
+Plug 'hrsh7th/vim-vsnip-integ'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-vsnip'
+Plug 'hrsh7th/cmp-nvim-lsp-signature-help'
+
+" Package manager
+Plug 'williamboman/mason.nvim'
+
+" theme
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
 " easily search, substitute, abbreviate multiple version of words, coercion to camel case / snake case / dote case / title case...
@@ -32,6 +45,11 @@ Plug 'tpope/vim-commentary'
 
 " Match more stuff with % (html tag, LaTeX...)
 Plug 'andymass/vim-matchup'
+
+" Intellisense
+Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/nvim-compe'
+Plug 'nvim-lualine/lualine.nvim'
 
 " PHP
 " Plug 'joonty/vdebug'
@@ -60,19 +78,8 @@ Plug 'chrisbra/csv.vim'
 " Python
 Plug 'davidhalter/jedi-vim'
 
-let g:coc_user_config = get(g:, 'coc_user_config', {})
 " Coc extensions
-let g:coc_global_extensions = [
-    \ 'coc-snippets',
-    \ 'coc-json', 
-    \ 'coc-css', 
-    \ 'coc-html',
-    \ 'coc-yaml',
-    \ 'coc-prettier',
-    \ 'coc-tsserver'
-    \]
-" \ 'coc-markmap',
-" \ 'coc-sh',
+let g:coc_global_extensions = []
 call plug#end()
 
 " Treat Json as Jsonc
@@ -143,8 +150,8 @@ noremap <Leader><Leader> :tabe ~/.config/nvim/init.vim
 "nnoremap <c-p> :Files<cr>
 "nnoremap <shift> :Files<cr>
 nnoremap t :bNext<cr>
-nmap <leader>gd <Plug>(coc-definition)
-nmap <leader>gr <Plug>(coc-references)
+"nmap <leader>gd <Plug>(coc-definition)
+"nmap <leader>gr <Plug>(coc-references)
 nnoremap <expr> j v:count ? 'j' : 'gj'
 nnoremap <expr> k v:count ? 'k' : 'gk'
 
@@ -153,6 +160,25 @@ noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
+
+" LSP config (the mappings used in the default file don't quite work right)
+nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>
+nnoremap <silent> gr <cmd>lua vim.lsp.buf.references()<CR>
+nnoremap <silent> gi <cmd>lua vim.lsp.buf.implementation()<CR>
+nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
+nnoremap <silent> <C-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
+nnoremap <silent> <C-n> <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
+nnoremap <silent> <C-p> <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
+
+" auto-format
+autocmd BufWritePre *.js lua vim.lsp.buf.formatting_sync(nil, 100)
+autocmd BufWritePre *.jsx lua vim.lsp.buf.formatting_sync(nil, 100)
+autocmd BufWritePre *.py lua vim.lsp.buf.formatting_sync(nil, 100)
+autocmd BufWritePre *.ts lua vim.lsp.buf.formatting_sync(nil, 100)
+autocmd BufWritePre *.tsx lua vim.lsp.buf.formatting_sync(nil, 100)
+autocmd BufWritePre *.php lua vim.lsp.buf.formatting_sync(nil, 100)
+
 
 "Disable ESC button
 inoremap <C-c> <esc>
@@ -165,9 +191,6 @@ function! SetupCommandAbbrs(from, to)
         \ .' ((getcmdtype() ==# ":" && getcmdline() ==# "'.a:from.'")'
         \ .'? ("'.a:to.'") : ("'.a:from.'"))'
 endfunction
-
-" Use C to open coc config
-call SetupCommandAbbrs('C', 'CocConfig')
 
 "prettier for JS linter
 
@@ -197,26 +220,22 @@ augroup SyntaxSettings
     autocmd BufNewFile,BufRead *.ts set filetype=typescript
 augroup END
 
-" Python
-"let g:jedi#auto_initialization = 0
-"let g:jedi#auto_vim_configuration = 
-"let g:jedi#use_tabs_not_buffers = 1
-"let g:jedi#use_splits_not_buffers = left
-"let g:jedi#popup_on_dot = 0
-"let g:jedi#popup_select_first = 0
-"let g:jedi#show_call_signatures = "1"
-
-"let g:jedi#goto_command = "<leader>d"
-"let g:jedi#goto_assignments_command = "<leader>g"
-"let g:jedi#goto_stubs_command = "<leader>s"
-"let g:jedi#goto_definitions_command = ""
-"let g:jedi#documentation_command = "K"
-"let g:jedi#usages_command = "<leader>n"
-"let g:jedi#completions_command = "<C-Space>"
-"let g:jedi#rename_command = "<leader>r"
-
-
-
-
-
-
+""" Core plugin configuration (lua)
+lua << EOF
+servers = {
+    'pyright',
+    'tsserver', -- uncomment for typescript. See https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md for other language servers
+    'phpactor',
+    'jsonls',
+    'rust_analyzer'
+}
+require('nvim-cmp-config')
+require('lspconfig-config')
+require('lualine-config')
+require('diagnostics')
+require'lspconfig'.tsserver.setup {}
+require'lspconfig'.phpactor.setup{}
+require'lspconfig'.jsonls.setup{}
+require'lspconfig'.pyright.setup{}
+require'lspconfig'.rust_analyzer.setup{}
+EOF

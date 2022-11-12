@@ -16,6 +16,31 @@ brew install ripgrep
 brew install fd
 ```
 
+## Intellisense mandatory
+
+* Install phpactor 
+* For python
+```
+npm i -g pyright
+```
+* For typescript
+```
+   npm install -g typescript typescript-language-server
+```
+* For bash
+```
+npm i -g bash-language-server
+```
+* For json
+```
+npm i -g vscode-langservers-extracted
+```
+* For Rust
+```
+rustup component add rust-src
+```
+
+
 ## Useful library
 
 ```
@@ -40,10 +65,21 @@ After enter into iTerm2 Preferences, select the prefered profile and change the 
 
 ### PHPActor
 
-If you want to use with success PHPActor you need to go into its directory (example: ~./config/nvim/plugged/phpactor), and launch:
+Go to ~/yourHome/
+```
+git clone git@github.com:phpactor/phpactor
+cd phpactor
+composer install
+cd /usr/local/bin
+ln -s ~/yourHome/phpactor/bin/phpactor phpactor
+phpactor status
+```
+
+##
+Install Rust
 
 ```
-composer install
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
 Please contribute if you want to create better configuration
