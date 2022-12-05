@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/Users/alessandrominoccheri/Work/Ale/certificates/backend'
+let g:netrw_dirhist_5='/Users/alessandrominoccheri/Work/Ale/certificates'
+let g:netrw_dirhist_4='/Users/alessandrominoccheri/Work/Ale/certificates/frontend'
+let g:netrw_dirhist_3='/Users/alessandrominoccheri/.config/nvim'
+let g:netrw_dirhist_2='/Users/alessandrominoccheri/Work/Ale/certificates/frontend'
+let g:netrw_dirhist_1='/Users/alessandrominoccheri/Work/Ale/website/content'
+let g:netrw_dirhist_0='/Users/alessandrominoccheri/Work/Ale/website/content/post'
+let g:netrw_dirhist_9='/Users/alessandrominoccheri/Work/Ale/website/content'
+let g:netrw_dirhist_8='/Users/alessandrominoccheri/Work/Ale/website'
+let g:netrw_dirhist_7='/Users/alessandrominoccheri/Work/Ale/certificates/frontend/src/common'

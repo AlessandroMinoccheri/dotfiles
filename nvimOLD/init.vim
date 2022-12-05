@@ -101,7 +101,7 @@ set ignorecase              " ignore case when searching
 set ruler                   " show the current row and column
 set nobackup
 highlight ColorColumn ctermbg=0 guibg=lightgrey
-colorscheme tokyonight
+colorscheme tokyonight-night
 set guifont=DroidSansMono_Nerd_Font:h11
 
 "Airline configuration
@@ -140,13 +140,14 @@ call neomake#configure#automake('nrwi', 500)
 let mapleader = " " " map leader to Space
 
 "Remapping key
+noremap <Leader><Leader> :tabe ~/.config/nvim/init.vim
+
 " Find files using Telescope command-line sugar.
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
-noremap <Leader><Leader> :tabe ~/.config/nvim/init.vim
 "nnoremap <c-p> :Files<cr>
 "nnoremap <shift> :Files<cr>
 nnoremap t :bNext<cr>
