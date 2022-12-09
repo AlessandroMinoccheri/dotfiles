@@ -15,4 +15,7 @@ vim.o.ignorecase=true              -- ignore case when searching
 vim.o.ruler=true                   -- show the current row and column
 vim.opt.writebackup = false
 vim.opt.guifont = { "DroidSansMono_Nerd_Font", ":h11"}
-
+vim.g.tagbar_width = 70
+vim.g.tagbar_compact = 1
+vim.g.tagbar_show_data_type = 1
+vim.g.tagbar_show_visibility = 0

@@ -35,6 +35,14 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<space>f', function() vim.lsp.buf.format { async = true } end, bufopts)
 end
 
+
+vim.api.nvim_create_autocmd("BufWritePre", {
+    pattern = { "*.js", "*.jsx", "*.py", "*.ts", "*.tsx", "*.php" },
+    callback = function()
+        vim.lsp.buf.formatting_sync(nil, 100)
+    end
+})
+
 require('minompi.lsp.nvim-cmp-config')
 require('minompi.lsp.diagnostics')
 
@@ -72,7 +80,6 @@ require('lspconfig')['rust_analyzer'].setup{
       ["rust-analyzer"] = {}
     }
 }
-
 
 
 

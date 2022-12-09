@@ -222,6 +222,11 @@ _G.packer_plugins = {
     path = "/Users/alessandrominoccheri/.local/share/nvim/site/pack/packer/start/vim-abolish",
     url = "https://github.com/tpope/vim-abolish"
   },
+  ["vim-be-good"] = {
+    loaded = true,
+    path = "/Users/alessandrominoccheri/.local/share/nvim/site/pack/packer/start/vim-be-good",
+    url = "https://github.com/ThePrimeagen/vim-be-good"
+  },
   ["vim-commentary"] = {
     loaded = true,
     path = "/Users/alessandrominoccheri/.local/share/nvim/site/pack/packer/start/vim-commentary",

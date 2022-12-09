@@ -15,7 +15,6 @@ export CMAKE_MODULE_PATH=${QT5_DIR}/lib/cmake:${CMAKE_MODULE_PATH}
 export CMAKE_PREFIX_PATH=${QT5_DIR}
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-13.jdk/Contents/Home
 export PATH="/Users/alessandrominoccheri/Library/Python/2.7/bin:$PATH"
-export PATH="$HOME/.cargo/bin:$PATH"
 alias composer="php /usr/local/bin/composer.phar"
 export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm

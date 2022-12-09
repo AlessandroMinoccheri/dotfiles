@@ -88,4 +88,7 @@ use "chrisbra/csv.vim"
 -- Python
 use "davidhalter/jedi-vim"
 
+-- Vim be good
+use "ThePrimeagen/vim-be-good"
+
 end)
