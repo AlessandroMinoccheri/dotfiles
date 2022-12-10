@@ -33,13 +33,16 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
   vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
   vim.keymap.set('n', '<space>f', function() vim.lsp.buf.format { async = true } end, bufopts)
-
-  vim.g.PHP_default_indenting = 1
+  vim.api.nvim_create_autocmd("BufWritePre", {
+        buffer = bufnr,
+        callback = function()
+            vim.lsp.buf.format()
+        end
+    })
 end
 
 
 require('minompi.lsp.nvim-cmp-config')
-require('minompi.lsp.autoformat')
 require('minompi.lsp.diagnostics')
 
 local servers = {
@@ -50,6 +53,10 @@ local servers = {
     'rust_analyzer',
     'sumneko_lua.setup'
 }
+
+require("lspconfig")["tsserver"].setup({
+    on_attach = on_attach,
+})
 
 require'lspconfig'.jsonls.setup{}
 
@@ -65,10 +72,7 @@ require('lspconfig')['pyright'].setup{
     on_attach = on_attach,
     flags = lsp_flags,
 }
-require('lspconfig')['tsserver'].setup{
-    on_attach = on_attach,
-    flags = lsp_flags,
-}
+
 require('lspconfig')['rust_analyzer'].setup{
     on_attach = on_attach,
     flags = lsp_flags,
@@ -78,7 +82,7 @@ require('lspconfig')['rust_analyzer'].setup{
     }
 }
 
-require'lspconfig'.sumneko_lua.setup {
+require('lspconfig')['sumneko_lua'].setup {
   settings = {
     Lua = {
       runtime = {
