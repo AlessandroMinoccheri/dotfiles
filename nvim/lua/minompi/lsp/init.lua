@@ -33,25 +33,22 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
   vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
   vim.keymap.set('n', '<space>f', function() vim.lsp.buf.format { async = true } end, bufopts)
+
+  vim.g.PHP_default_indenting = 1
 end
 
 
-vim.api.nvim_create_autocmd("BufWritePre", {
-    pattern = { "*.js", "*.jsx", "*.py", "*.ts", "*.tsx", "*.php" },
-    callback = function()
-        vim.lsp.buf.formatting_sync(nil, 100)
-    end
-})
-
 require('minompi.lsp.nvim-cmp-config')
+require('minompi.lsp.autoformat')
 require('minompi.lsp.diagnostics')
 
-servers = {
+local servers = {
     'pyright',
-    'tsserver', 
+    'tsserver',
     'phpactor',
     'jsonls',
-    'rust_analyzer'
+    'rust_analyzer',
+    'sumneko_lua.setup'
 }
 
 require'lspconfig'.jsonls.setup{}
@@ -81,7 +78,28 @@ require('lspconfig')['rust_analyzer'].setup{
     }
 }
 
-
+require'lspconfig'.sumneko_lua.setup {
+  settings = {
+    Lua = {
+      runtime = {
+        -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
+        version = 'LuaJIT',
+      },
+      diagnostics = {
+        -- Get the language server to recognize the `vim` global
+        globals = {'vim'},
+      },
+      workspace = {
+        -- Make the server aware of Neovim runtime files
+        library = vim.api.nvim_get_runtime_file("", true),
+      },
+      -- Do not send telemetry data containing a randomized but unique identifier
+      telemetry = {
+        enable = false,
+      },
+    },
+  },
+}
 
 
 
