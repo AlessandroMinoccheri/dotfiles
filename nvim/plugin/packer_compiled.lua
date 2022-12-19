@@ -267,6 +267,11 @@ _G.packer_plugins = {
     path = "/Users/alessandrominoccheri/.local/share/nvim/site/pack/packer/start/vim-mundo",
     url = "https://github.com/simnalamburt/vim-mundo"
   },
+  ["vim-php-cs-fixer"] = {
+    loaded = true,
+    path = "/Users/alessandrominoccheri/.local/share/nvim/site/pack/packer/start/vim-php-cs-fixer",
+    url = "https://github.com/stephpy/vim-php-cs-fixer"
+  },
   ["vim-repeat"] = {
     loaded = true,
     path = "/Users/alessandrominoccheri/.local/share/nvim/site/pack/packer/start/vim-repeat",

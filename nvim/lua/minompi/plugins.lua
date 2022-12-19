@@ -29,8 +29,6 @@ use({
   end,
 })
 
---use "junegunn/fzf", { 'dir': '~/.fzf', 'do': './install --all' }"
---use "junegunn/fzf.vim"
 use "rking/ag.vim"
 use "mhartington/oceanic-next"
 use "https://github.com/neomake/neomake"
@@ -90,5 +88,8 @@ use "davidhalter/jedi-vim"
 
 -- Vim be good
 use "ThePrimeagen/vim-be-good"
+
+-- PHP formatter
+use "stephpy/vim-php-cs-fixer"
 
 end)
