@@ -38,6 +38,8 @@ npm i -g vscode-langservers-extracted
 * For Rust
 ```
 rustup component add rust-src
+brew install rust-analyzer
+cargo install --features lsp --locked taplo-cli
 ```
 
 * For lua 

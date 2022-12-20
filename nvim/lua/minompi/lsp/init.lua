@@ -59,6 +59,7 @@ local servers = {
     'phpactor',
     'jsonls',
     'rust_analyzer',
+    'taplo',
     'sumneko_lua.setup'
 }
 
@@ -84,11 +85,9 @@ require('lspconfig')['pyright'].setup{
 require('lspconfig')['rust_analyzer'].setup{
     on_attach = on_attach,
     flags = lsp_flags,
-    -- Server-specific settings...
-    settings = {
-      ["rust-analyzer"] = {}
-    }
 }
+
+require'lspconfig'.taplo.setup{}
 
 require('lspconfig')['sumneko_lua'].setup {
   settings = {
