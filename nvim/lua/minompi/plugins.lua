@@ -92,4 +92,8 @@ use "ThePrimeagen/vim-be-good"
 -- PHP formatter
 use "stephpy/vim-php-cs-fixer"
 
+-- Rust tools
+use "simrat39/rust-tools.nvim"
+use "mfussenegger/nvim-dap"
+
 end)

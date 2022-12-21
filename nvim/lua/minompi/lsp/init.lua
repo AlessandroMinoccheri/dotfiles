@@ -33,18 +33,17 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
   vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
   vim.keymap.set('n', '<space>f', function() vim.lsp.buf.format { async = true } end, bufopts)
-  vim.api.nvim_create_autocmd("BufWritePre", {
-        buffer = bufnr,
-        callback = function()
-            vim.lsp.buf.format()
-        end
-    })
-  vim.g.php_cs_fixer_enable_default_mapping = false
+  --vim.api.nvim_create_autocmd("BufWritePre", {
+  --      buffer = bufnr,
+  --      callback = function()
+  --          vim.lsp.buf.format()
+  --      end
+ --   })
+--  vim.g.php_cs_fixer_enable_default_mapping = false
 
   vim.cmd [[
     autocmd BufNewFile,BufRead *.tsx set filetype=typescript
     autocmd BufNewFile,BufRead *.ts set filetype=typescript
-    autocmd BufWritePost *.php silent! call PhpCsFixerFixFile()
 ]]
 
 end
