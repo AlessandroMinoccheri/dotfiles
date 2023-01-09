@@ -29,6 +29,12 @@ use({
   end,
 })
 
+-- markdown preview
+use({
+    "iamcco/markdown-preview.nvim",
+    run = function() vim.fn["mkdp#util#install"]() end,
+})
+
 use "rking/ag.vim"
 use "mhartington/oceanic-next"
 use "https://github.com/neomake/neomake"
