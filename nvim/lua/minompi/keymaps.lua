@@ -22,10 +22,18 @@ keymap('n', '<C-n>', ':NvimTreeToggle<CR>')            -- open/close
 keymap('n', '<leader>r', ':NvimTreeRefresh<CR>')       -- refresh
 
 -- Disable arrows function
-keymap('', '<up>', '<nop>')
-keymap('', '<down>', '<nop>')
-keymap('', '<left>', '<nop>')
-keymap('', '<right>', '<nop>')
+keymap('i', '<up>', '<nop>')
+keymap('i', '<down>', '<nop>')
+keymap('i', '<left>', '<nop>')
+keymap('i', '<right>', '<nop>')
+keymap('v', '<up>', '<nop>')
+keymap('v', '<down>', '<nop>')
+keymap('v', '<left>', '<nop>')
+keymap('v', '<right>', '<nop>')
+keymap('n', '<up>', '<nop>')
+keymap('n', '<down>', '<nop>')
+keymap('n', '<left>', '<nop>')
+keymap('n', '<right>', '<nop>')
 
 -- Map Esc to kk
 keymap('i', 'kk', '<Esc>')
