@@ -35,6 +35,16 @@ use({
     run = function() vim.fn["mkdp#util#install"]() end,
 })
 
+-- Yaml
+use {
+  "cuducos/yaml.nvim",
+  ft = {"yaml"}, -- optional
+  requires = {
+    "nvim-treesitter/nvim-treesitter",
+    "nvim-telescope/telescope.nvim" -- optional
+  },
+}
+
 use "rking/ag.vim"
 use "mhartington/oceanic-next"
 use "https://github.com/neomake/neomake"

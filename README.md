@@ -47,6 +47,11 @@ cargo install --features lsp --locked taplo-cli
 brew install lua-language-server
 ```
 
+* For yaml
+```
+yarn global add yaml-language-server
+```
+
 ## How to install a new language for LSP Intellisense
 * check in this link the language that you want to install and do it: [https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurationsy](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md)
 * change the init.vim config adding to the `servers` array your new language
