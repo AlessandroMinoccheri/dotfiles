@@ -18,6 +18,42 @@ brew install fd
 
 ## Intellisense mandatory
 
+brew
+
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+git 
+```
+brew install git
+```
+
+zsh
+```
+brew install zsh
+```
+
+oh-my.zsh
+```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+zsh-syntax-highlighting
+```
+https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md
+```
+
+zsh-autosuggestions
+```
+https://github.com/zsh-users/zsh-autosuggestions
+```
+
+powerlevel10k
+```
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+```
+
 * Install phpactor 
 * For python
 ```
