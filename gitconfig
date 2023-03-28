@@ -1,6 +1,6 @@
 [user]
 	name = AlessandroMinoccheri
-	email = alessandro.minoccheri@ideato.info
+	email = aminoccheri@inpost.it
 [core]
 	editor = nvim
 	excludesfile = /Users/alessandrominoccheri/.gitignore_global
@@ -13,3 +13,5 @@
 	user = AlessandroMinoccheri
 [help]
 	autoCorrect = 30
+[credential]
+	helper = store
