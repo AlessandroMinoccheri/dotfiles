@@ -10,6 +10,7 @@ export PATH="/Users/alessandrominoccheri/.npm-global/bin/:$PATH"
 export PATH="/Users/alessandrominoccheri/.npm-global/lib/node_modules:$PATH"
 export PATH="/usr/local/opt:$PATH"
 export PATH="$HOME/.symfony/bin:$PATH"
+export PATH="/Users/alessandrominoccheri/.cargo/bin:$PATH"
 export QT5_DIR=/usr/local/opt/qt5
 export CMAKE_MODULE_PATH=${QT5_DIR}/lib/cmake:${CMAKE_MODULE_PATH}
 export CMAKE_PREFIX_PATH=${QT5_DIR}
@@ -34,7 +35,4 @@ if [ -f ~/.bash_customer ]; then
     . ~/.bash_customer
 fi
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/alessandrominoccheri/.sdkman"
-[[ -s "/Users/alessandrominoccheri/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/alessandrominoccheri/.sdkman/bin/sdkman-init.sh"
 . "$HOME/.cargo/env"

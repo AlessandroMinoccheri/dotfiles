@@ -11,3 +11,5 @@ Thumbs.db
 # IDEs
 .idea/
 
+# phpactor
+.phpactor.json
