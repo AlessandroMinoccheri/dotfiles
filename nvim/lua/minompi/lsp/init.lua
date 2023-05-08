@@ -58,7 +58,9 @@ local servers = {
     'phpactor',
     'jsonls',
     'rust_analyzer',
-    'taplo'
+    'taplo',
+    'terraformls',
+    'tflint'
 }
 
 require("lspconfig")["tsserver"].setup({
@@ -88,5 +90,10 @@ require('lspconfig')['rust_analyzer'].setup{
 require'lspconfig'.taplo.setup{}
 
 require'lspconfig'.yamlls.setup{}
+
+require'lspconfig'.terraformls.setup{}
+
+require'lspconfig'.tflint.setup{}
+
 
 

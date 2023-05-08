@@ -88,6 +88,12 @@ brew install lua-language-server
 yarn global add yaml-language-server
 ```
 
+* For terraform
+```
+brew install hashicorp/tap/terraform-ls
+brew install tflint
+```
+
 ## How to install a new language for LSP Intellisense
 * check in this link the language that you want to install and do it: [https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurationsy](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md)
 * change the init.vim config adding to the `servers` array your new language
