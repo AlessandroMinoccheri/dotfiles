@@ -90,6 +90,8 @@ yarn global add yaml-language-server
 
 * For terraform
 ```
+brew tap hashicorp/tap
+brew install hashicorp/tap/terraform
 brew install hashicorp/tap/terraform-ls
 brew install tflint
 ```
