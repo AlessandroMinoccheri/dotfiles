@@ -60,7 +60,8 @@ local servers = {
     'rust_analyzer',
     'taplo',
     'terraformls',
-    'tflint'
+    'tflint',
+    'jdtls'
 }
 
 require("lspconfig")["tsserver"].setup({
@@ -95,5 +96,8 @@ require'lspconfig'.terraformls.setup{}
 
 require'lspconfig'.tflint.setup{}
 
-
+require('lspconfig')['jdtls'].setup{
+    on_attach = on_attach,
+    flags = lsp_flags,
+}
 

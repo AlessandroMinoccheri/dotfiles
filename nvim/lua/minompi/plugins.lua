@@ -112,4 +112,13 @@ use "stephpy/vim-php-cs-fixer"
 use "simrat39/rust-tools.nvim"
 use "mfussenegger/nvim-dap"
 
+-- Java
+use({
+  "mfussenegger/nvim-jdtls",
+  config = function()
+    -- https://github.com/fitrh/init.nvim/blob/main/lua/plugin/jdtls/config.lua
+    require("plugin.jdtls.config").attach()
+  end,
+  module = "jdtls",
+})
 end)

@@ -96,6 +96,15 @@ brew install hashicorp/tap/terraform-ls
 brew install tflint
 ```
 
+* For Java
+```
+brew install jdtls
+```
+Download this tar.gz: https://download.eclipse.org/justj/?file=jdtls/milestones/1.9.0
+Unzip it and put the folder here: /opt/homebrew/Cellar
+Download this jar: https://projectlombok.org/Download
+Put it here: /opt/homebrew/Cellar/jdt-language-server-1.9.0-202203031534/plugins
+
 ## How to install a new language for LSP Intellisense
 * check in this link the language that you want to install and do it: [https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurationsy](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md)
 * change the init.vim config adding to the `servers` array your new language
