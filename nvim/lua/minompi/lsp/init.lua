@@ -61,7 +61,6 @@ local servers = {
     'taplo',
     'terraformls',
     'tflint',
-    'jdtls'
 }
 
 require("lspconfig")["tsserver"].setup({
@@ -95,9 +94,4 @@ require'lspconfig'.yamlls.setup{}
 require'lspconfig'.terraformls.setup{}
 
 require'lspconfig'.tflint.setup{}
-
-require('lspconfig')['jdtls'].setup{
-    on_attach = on_attach,
-    flags = lsp_flags,
-}
 
