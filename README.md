@@ -145,11 +145,17 @@ ln -s ~/yourHome/phpactor/bin/phpactor phpactor
 phpactor status
 ```
 
-##
-Install Rust
+## Install Rust
 
 ```
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+
+## Upgrade packages
+
+In nvim 
+```
+:PackerUpdate
 ```
 
 Please contribute if you want to create better configuration
