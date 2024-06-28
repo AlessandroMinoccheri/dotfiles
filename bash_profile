@@ -25,6 +25,8 @@ export PATH
 
 export ANDROID_HOME=export ANDROID_HOME=/usr/local/opt/android-sdk
 
+alias git='LC_ALL=en_GB git'
+
 ###-tns-completion-start-###
 if [ -f /Users/alessandrominoccheri/.tnsrc ]; then
     source /Users/alessandrominoccheri/.tnsrc
@@ -36,3 +38,4 @@ if [ -f ~/.bash_customer ]; then
 fi
 
 . "$HOME/.cargo/env"
+export LANG=en_US.UTF-8
