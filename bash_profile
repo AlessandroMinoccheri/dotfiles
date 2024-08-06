@@ -14,6 +14,7 @@ export PATH="/Users/alessandrominoccheri/.cargo/bin:$PATH"
 export QT5_DIR=/usr/local/opt/qt5
 export CMAKE_MODULE_PATH=${QT5_DIR}/lib/cmake:${CMAKE_MODULE_PATH}
 export CMAKE_PREFIX_PATH=${QT5_DIR}
+export LANG="en_US.UTF-8"
 export JAVA_HOME=$(/usr/libexec/java_home)
 export PATH="/Users/alessandrominoccheri/Library/Python/2.7/bin:$PATH"
 alias composer="php /usr/local/bin/composer.phar"
@@ -25,6 +26,7 @@ export PATH
 
 export ANDROID_HOME=export ANDROID_HOME=/usr/local/opt/android-sdk
 
+alias git='LANG=en_GB git'
 alias git='LC_ALL=en_GB git'
 
 ###-tns-completion-start-###
