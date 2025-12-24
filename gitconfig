@@ -15,3 +15,6 @@
 	autoCorrect = 30
 [credential]
 	helper = store
+[pull]
+	ff = only
+	rebase = false
