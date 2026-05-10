@@ -11,7 +11,7 @@ use {
   tag = 'nightly' -- optional, updated every week. (see issue #1193)
 }
 
-use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'} -- buffer manager
+use {'akinsho/bufferline.nvim', tag = "v4.*", requires = 'nvim-tree/nvim-web-devicons'} -- buffer manager
 
 use {
   'nvim-telescope/telescope.nvim', tag = '0.1.4',

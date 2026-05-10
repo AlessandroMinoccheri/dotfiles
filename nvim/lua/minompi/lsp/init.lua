@@ -1,22 +1,12 @@
-local lsp_flags = {
-  -- This is the default in Nvim 0.7+
-  debounce_text_changes = 150,
-}
-
 local opts = { noremap=true, silent=true }
 vim.keymap.set('n', '<space>e', vim.diagnostic.open_float, opts)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
 vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, opts)
 
--- Use an on_attach function to only map the following keys
--- after the language server attaches to the current buffer
 local on_attach = function(client, bufnr)
-  -- Enable completion triggered by <c-x><c-o>
-  vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+  vim.bo[bufnr].omnifunc = 'v:lua.vim.lsp.omnifunc'
 
-  -- Mappings.
-  -- See `:help vim.lsp.*` for documentation on any of the below functions
   local bufopts = { noremap=true, silent=true, buffer=bufnr }
   vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
   vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
@@ -33,65 +23,39 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
   vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
   vim.keymap.set('n', '<space>f', function() vim.lsp.buf.format { async = true } end, bufopts)
-  --vim.api.nvim_create_autocmd("BufWritePre", {
-  --      buffer = bufnr,
-  --      callback = function()
-  --          vim.lsp.buf.format()
-  --      end
- --   })
---  vim.g.php_cs_fixer_enable_default_mapping = false
 
   vim.cmd [[
     autocmd BufNewFile,BufRead *.tsx set filetype=typescript
     autocmd BufNewFile,BufRead *.ts set filetype=typescript
-]]
-
+  ]]
 end
-
 
 require('minompi.lsp.nvim-cmp-config')
 require('minompi.lsp.diagnostics')
 
-local servers = {
-    'pyright',
-    'tsserver',
-    'phpactor',
-    'jsonls',
-    'rust_analyzer',
-    'taplo',
-    'terraformls',
-    'tflint',
-}
-
-require("lspconfig")["tsserver"].setup({
-    on_attach = on_attach,
+-- Apply on_attach globally to all LSP servers
+vim.lsp.config('*', {
+  on_attach = on_attach,
 })
 
-require'lspconfig'.jsonls.setup{}
+-- Server-specific config
+vim.lsp.config('phpactor', {
+  init_options = {
+    ["language_server_phpstan.enabled"] = false,
+    ["language_server_psalm.enabled"] = false,
+  },
+})
 
-require'lspconfig'.phpactor.setup{
-    on_attach = on_attach,
-    init_options = {
-        ["language_server_phpstan.enabled"] = false,
-        ["language_server_psalm.enabled"] = false,
-    }
-}
-
-require('lspconfig')['pyright'].setup{
-    on_attach = on_attach,
-    flags = lsp_flags,
-}
-
-require('lspconfig')['rust_analyzer'].setup{
-    on_attach = on_attach,
-    flags = lsp_flags,
-}
-
-require'lspconfig'.taplo.setup{}
-
-require'lspconfig'.yamlls.setup{}
-
-require'lspconfig'.terraformls.setup{}
-
-require'lspconfig'.tflint.setup{}
+-- Enable all servers
+vim.lsp.enable({
+  'ts_ls',
+  'pyright',
+  'phpactor',
+  'jsonls',
+  'rust_analyzer',
+  'taplo',
+  'yamlls',
+  'terraformls',
+  'tflint',
+})
 
