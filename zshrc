@@ -122,3 +122,6 @@ source $ZSH/oh-my-zsh.sh
 alias python=/usr/bin/python3
 
 export PATH="$HOME/.local/bin:$PATH"
+
+# opencode
+export PATH=/Users/alessandrominoccheri/.opencode/bin:$PATH
